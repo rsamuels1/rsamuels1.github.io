@@ -11554,13 +11554,27 @@ html {
   height: 100%;
 }
 
-.bg-gradient-primary-to-secondary {
+/* .bg-gradient-primary-to-secondary {
   background: #1e30f3;
   background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
+} */
+
+/* trans care logo color gradient */
+.bg-gradient-primary-to-secondary {
+  background: #86cdf4;
+  background: linear-gradient(135deg, #86cdf4 0%, #e692cd 100%);
 }
 
+/* 
 .text-gradient {
   background: -webkit-linear-gradient(315deg, #1e30f3 0%, #e21e80 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
+/* trans care logo text gradient */
+.text-gradient {
+  background: -webkit-linear-gradient(315deg, #86cdf4 0%, #e692cd 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
