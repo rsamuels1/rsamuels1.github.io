@@ -1,0 +1,18 @@
+<script>
+  function generateCaptcha() {
+    let num1 = Math.floor(Math.random() * 10) + 1;
+    let num2 = Math.floor(Math.random() * 10) + 1;
+    let operator = Math.random() > 0.5 ? "+" : "-";
+    let question = document.getElementById("captchaQuestion");
+    question.textContent = `${num1} ${operator} ${num2}`;
+    let answer = eval(`${num1} ${operator} ${num2}`);
+    document.getElementById("captchaAnswer").value = answer;
+  }
+
+  window.onload = generateCaptcha;
+</script>
+
+<div>
+  <p id="captchaQuestion"></p>
+  <input type="text" id="captchaInput" placeholder="Enter answer">
+</div>
