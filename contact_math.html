@@ -39,6 +39,7 @@
             }
         }
     </script>
+    
 </head>
 
 <body class="d-flex flex-column">
@@ -141,8 +142,8 @@
                                 <div class="form-floating mb-3">
                                     <input class="form-control" id="userAnswer" type="text" placeholder="Enter answer"
                                         data-sb-validations="required"/>
-                                        <label for="userAnswer">Solve this Math Problem:
-                                            <span id="mathQuestion"></span></label>
+                                        <label for="userAnswer">Solve this Math Problem: <span id="mathQuestion"></span>
+                                            </label>
                                     <div class="invalid-feedback" data-sb-feedback="userAnswer:required">An answer is required.</div>
                                 </div>
                                 <!-- Submit success message-->
@@ -163,7 +164,14 @@
                                 </div>
                                 <!-- Submit Button-->
                                 <div class="d-grid"><button class="btn btn-primary btn-lg disabled" id="submitButton"
-                                        type="submit">Submit</button></div>
+                                        type="submit">Submit</button>
+                                        <script>
+                                            checkAnswer();
+                                            </script>
+                                            <script>
+                                            generateCaptcha(); // Generate a new captcha on page load
+                                        </script>
+                                    </div>
                             </form>
                         </div>
                     </div>
