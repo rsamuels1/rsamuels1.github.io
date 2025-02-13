@@ -144,7 +144,7 @@
                                         data-sb-validations="required"/>
                                         <label for="userAnswer">Solve this Math Problem: <span id="mathQuestion"></span>
                                             </label>
-                                    <div class="invalid-feedback" data-sb-feedback="userAnswer:required">An answer is required.</div>
+                                    <!-- <div class="invalid-feedback" data-sb-feedback="userAnswer:required">An answer is required.</div> -->
                                 </div>
                                 <!-- Submit success message-->
                                 <!---->
@@ -164,10 +164,10 @@
                                 </div>
                                 <!-- Submit Button-->
                                 <div class="d-grid"><button class="btn btn-primary btn-lg disabled" id="submitButton"
-                                        type="submit">Submit</button>
-                                        <script>
+                                        type="submit" onclick="checkAnswer()">Submit</button>
+                                        <!-- <script>
                                             checkAnswer();
-                                            </script>
+                                            </script> -->
                                             <script>
                                             generateCaptcha(); // Generate a new captcha on page load
                                         </script>
