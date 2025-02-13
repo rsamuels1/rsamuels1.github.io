@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Captcha</title>
+    <script>
+        function generateCaptcha() {
+            let num1 = Math.floor(Math.random() * 10) + 1; 
+            let num2 = Math.floor(Math.random() * 10) + 1;
+            let operator = Math.random() > 0.5 ? "+" : "-";
+            document.getElementById("mathQuestion").textContent = `${num1} ${operator} ${num2}`; 
+            let answer = operator === "+" ? num1 + num2 : num1 - num2;
+            document.getElementById("correctAnswer").value = answer;
+        }
+        
+        function checkAnswer() {
+            let userAnswer = document.getElementById("userAnswer").value;
+            let correctAnswer = document.getElementById("correctAnswer").value;
+            if (userAnswer === correctAnswer) {
+                alert("Correct!");
+            } else {
+                alert("Incorrect! Try again.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>Solve this math problem:</p>
+    <span id="mathQuestion"></span>
+    <br>
+    <input type="text" id="userAnswer" placeholder="Enter answer">
+    <button onclick="checkAnswer()">Submit</button> 
+    <script>
+        generateCaptcha(); // Generate a new captcha on page load
+    </script>
+</body>
+</html>
